@@ -1,1 +1,5 @@
-@Vaue is an anatomy that we use extensively with Java spring boot. Although I tried different methods to write the test of the paramteric value we receive with @valu, this solution is the most convenient. You can apply the following solution for the value you use with @Value used in the class to be tested in the class to be tested that we have made Injeck Mock.
+@Vaue is an anatation that we use extensively with Java spring boot. Although I tried different methods to write the test of the paramteric value we receive with @valu, this solution is the most convenient. You can apply the following solution for the value you use with @Value used in the class to be tested in the class to be tested that we have made Injeck Mock.
+
+@Value("${greeting.salutation}")
+private String greetingSalutation;  
+ReflectionTestUtils.setField(writeConsole, "greetingSalutation", greetingSalutation);
